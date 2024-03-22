@@ -1,7 +1,7 @@
 
 .container{
   width: 100%;
-  background-color: #4a88ec;
+  background-color: #3179ba;
 }
 .section_name{
   padding-left: 20px;
@@ -22,51 +22,66 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  z-index: 1000; /* Ensure it's above other elements */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  z-index: 9999;
 }
 
 .popup {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 80%;
   position: relative;
+}
+
+.popup h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.popup input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
 }
 
 .close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #999;
   cursor: pointer;
-  margin-right: 10px;
-  margin-top: 10px;
-  height: 20px;
+  transition: color 0.3s;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
+.close:hover {
+  color: #555;
 }
 .titletodo{
   padding: 5px;
@@ -89,8 +104,8 @@ button:hover {
 }
 .ancher{
   padding-left: 18px;
- color: gray;
- font-weight: 400;
+ color: #0e2b4a;
+ font-weight: 470;
  cursor: pointer;
  
  
@@ -157,7 +172,7 @@ button:hover {
 }
 
 .gap-16 {
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 .md-gap-8 {
@@ -275,7 +290,8 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   
-  height: 12px;
+  height: 15px;
+  padding-top: 5px;
   
 }
 .icon4{
@@ -288,6 +304,8 @@ button:hover {
   color: #033467;
   font-weight: 500;
   margin-left: 10px;
+  padding: 10px;
+  margin: 0;
   
 }
 

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { FaRegTrashCan } from 'react-icons/fa6';
 import { IoClose } from "react-icons/io5";
 import { BsThreeDots } from "react-icons/bs";
+import { AiOutlinePlus } from "react-icons/ai"
 export default function ListTask({ tasks, setTasks }) {
     const [todos, setTodos] = useState(tasks.filter((t) => t.status === 'todo'));
     const [inProgress, setInProgress] = useState(tasks.filter((t) => t.status === 'progress'));
@@ -76,7 +77,7 @@ function Section({ status, tasks, setTasks, todos, inProgress, done, review }) {
 
     return (
         <div>
-            <div ref={drop} style={{backgroundColor:"lightgray",width:"300px",paddingTop:"20px",paddingBottom:"20px",borderRadius:"8px"}} >
+            <div ref={drop} style={{backgroundColor:"#edeef0",width:"325px",paddingTop:"20px",paddingBottom:"20px",borderRadius:"8px"}} >
                 <Header text={text} count={tasksToMap.length} />
                 {tasksToMap.map((task, index) => (
                     <Task key={index} task={task} tasks={tasks} setTasks={setTasks} />
@@ -117,7 +118,7 @@ function Task({ task, tasks, setTasks }) {
     }));
 
     return (
-        <div ref={drag} style={{ borderRadius: '8px', backgroundColor: 'white', marginBottom: '8px', width:"250px", marginLeft:"9px" }} className={
+        <div ref={drag} style={{ borderRadius: '8px', backgroundColor: 'white', marginBottom: '8px', width:"270px", marginLeft:"9px" }} className={
             `relative items-center bg-white-300 p-4 mt-8 shadow-md rounded-lg cursor-grab ${isDragging ? 'opacity-50' : 'opacity-100'}`
         }>
             <div className="inner" style={{ backgroundColor: task.backgroundColor }}></div>
